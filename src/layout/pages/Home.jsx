@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
-import SideBar from '../components/home/SideBar'
-import MainBody from '../components/home/MainBody'
+import "../../assets/css/home.css"
+import Header from '../components/home/Header'
+import MainSec from '../components/home/MainSec'
+import Join from '../components/home/Join'
 function Home() {
-    const [currentSec,setCurrentSec] = useState(0);
 
     return (
-        <section className="home">
-            <SideBar setCurrentSec={setCurrentSec}/>
-            <MainBody currentSec={currentSec}/>
-        </section>
+        <div className="home">
+            <Header/>
+            <MainSec/>
+            <Join/>
+        </div>
     )
 }
 

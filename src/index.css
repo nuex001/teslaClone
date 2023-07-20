@@ -45,9 +45,9 @@ html {
   padding: 2em 0;
   padding-left: 3em;
   padding-right: 2em;
-  position: sticky;
+  position: absolute;
   top: 0%;
-  background-color: var(--bg);
+  /* background-color: var(--header); */
 }
 
 .container nav img {
@@ -58,9 +58,19 @@ html {
 .container nav ul {
   display: flex;
   gap: 0em 0em;
+  align-items: center;
   justify-content: space-between;
 }
 
+.container nav .logo {
+  display: flex;
+  align-items: center;
+}
+.container nav .logo span{
+font-size: 1.6em;
+margin-left: 5px;
+color: var(--header);
+}
 .container nav ul li a {
   color: var(--primary);
   font-size: 1.5em;
@@ -74,128 +84,15 @@ html {
 .container nav ul li a:hover {
   background-color: var(--highlight);
 }
-
-.home {
-  width: 100%;
-  height: auto;
+.container nav ul li.world a {
   display: flex;
-  justify-content: flex-end;
-  margin: 3em 0em;
-  /* padding-left: 3em; */
+  align-items: center;
+  margin-top: 0px;
+}
+.container nav ul li.world a img{
+  margin-right: 2px;
 }
 
-.home .sideBarSec {
-  position: fixed;
-  width: 20%;
-  height: auto;
-  left: 4em;
-  top: 15%;
-}
-
-.home .sidebar {
-  width: 100%;
-  height: 300px;
-}
-
-.home .subMenu {
-  display: none;
-}
-
-.home .sidebar form {
-  display: none;
-}
-
-.home .sidebar h2 {
-  color: var(--header);
-  font-size: 2em;
-  font-weight: 500;
-  margin-left: 0.1em;
-}
-
-.home .sidebar li {
-  font-size: 1.6em;
-  margin: 1em 0em;
-}
-
-.home .sidebar li a {
-  color: var(--primary);
-  font-weight: 500;
-  cursor: pointer;
-  padding: 0.2em;
-  border: 2px solid;
-  border-color: transparent;
-  transition: text 0.5s ease-in;
-}
-
-.home .sidebar li a:hover {
-  text-decoration: underline;
-}
-
-.home .sidebar li a:active {
-  border-radius: 5px;
-  border-color: var(--primary);
-}
-
-/* MAIN */
-.home .main {
-  width: 67%;
-  height: auto;
-  margin-right: 4em;
-}
-
-.home main .sec {
-  margin-bottom: 4em;
-}
-
-.home main h1 {
-  color: var(--header);
-  font-size: 4em;
-  margin-bottom: 0.5em;
-  font-weight: 600;
-}
-
-.home main h4 {
-  color: var(--header);
-  font-size: 1.5em;
-  margin-bottom: 1em;
-  font-weight: 600;
-  line-height: 20px;
-}
-
-.home main p {
-  color: var(--text);
-  font-size: 1.5em;
-  font-weight: 400;
-  line-height: 25px;
-  padding-bottom: 14px;
-  max-inline-size: 75ch;
-  word-spacing: 0.5px;
-}
-
-.home main p a {
-  text-decoration: underline;
-  color: var(--primary);
-}
-
-.home main p.row {
-  display: flex;
-}
-
-.home main p li {
-  margin-left: 0.5em;
-}
-
-.home main #explore h4 {
-  margin-bottom: 0.2em;
-}
-
-.home main h4 li {
-  list-style: inside;
-}
-
-.home main .sec p.explore {
-  margin-left: 1.5em;
-}
 
 .container nav .menu {
   display: none;
@@ -212,7 +109,19 @@ html {
 .container .menu-overlay .mobileNav {
   display: none;
 }
+.container footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0em;
+  gap: 2em 2em;
+}
 
+.container footer a{
+  font-weight: 500;
+  font-size: 1.2em;
+  color: var(--header);
+}
 
 
 /* MOBILE RESPONSIVE */
@@ -319,112 +228,17 @@ html {
   .container .menu-overlay .mobileNav ul li:hover {
     background-color: var(--highlight);
   }
-
-  .home .sideBarSec {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    left: 0%;
-    top: 9%;
-    background-color: var(--bg);
-  }
-  .home .sideBarSec.sticky {
-    position: fixed;
-    top: 0%;
-  }
-  .home .subMenu {
-    width: 100%;
-    display: flex;
-    gap: 0 2em;
-    align-items: flex-end;
-    padding: 2em 2em;
-    background-color: var(--bg);
-    border-bottom: 1px solid #E2E3E3;
-    cursor: pointer;
-  }
-
-  .home .subMenu h4 {
-    font-weight: 600;
-    font-size: 1.6em;
-    color: var(--primary);
-  }
-
-  .home .subMenu .icon {
-    font-size: 1.6em;
-    color: var(--primary);
-    transition: 500ms ease-in-out;
-  }
-
-  .home .sideBarSec.active .subMenu .icon {
-    transform: rotate(180deg);
-  }
-
-  .home .sideBarSec .sidebar {
-    width: 100%;
-    height: 100vh;
-    left: 0%;
-    top: 18.5%;
-    padding: 0em 2.5em;
-    background-color: var(--bg);
-    z-index: 4;
-    transition: 500ms ease-in-out;
-    transform: translateY(-100%);
-    display: none;
-  }
-
-  .home .sideBarSec.active .sidebar {
-    transform: translateY(0%);
-    display: block;
-  }
-
-  .home .sidebar form {
-    width: 100%;
-    height: 4em;
+  .container .menu-overlay .mobileNav ul li.world a {
     display: flex;
     align-items: center;
-    margin: 2em 0em;
-    border-radius: 5px;
-    background-color: var(--highlight);
   }
-
-  .home .sidebar form button {
-    font-size: 2em;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    margin: 0em 0.5em;
-    color: var(--primary);
-    cursor: pointer;
+  .container .menu-overlay .mobileNav ul li.world a img{
+    object-fit: cover;
+    width: 20px;
+    margin-right: 5px;
   }
-
-  .home .sidebar form input {
-    width: 100%;
-    font-size: 2em;
-    height: inherit;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    color: var(--primary);
+  .container footer{
+  flex-direction: column;
+    gap: 2em 2em;
   }
-
-  .home .sidebar h2 {
-    font-size: 1.6em;
-    margin-top: 2em;
-  }
-
-  .home .sidebar li {
-    font-size: 1.6em;
-    margin: 1.5em 0em;
-  }
-
-  .home .main {
-    width: 100%;
-    height: auto;
-    padding-left: 2em;
-  }
-
-  .home main p {
-    font-size: 1.5em;
-  }
-
 }

@@ -11,7 +11,7 @@ function MainSec() {
       <div className="sec1">
         <h1>Make a Difference</h1>
         <h4>Apply your talents to help secure a cleaner, safer world as a Tesla intern.</h4>
-        <Link>Search Careers</Link>
+        <Link to={"careers"}>Search Careers</Link>
       </div>
       <div className="sec2">
         <div className="row">

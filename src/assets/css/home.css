@@ -221,6 +221,8 @@ padding-top: 7em;
     text-decoration: underline;
 }
 
+
+
 /* MOBILE RESPONSIVE */
 @media (max-width:1024px) {
     .home header {

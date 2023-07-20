@@ -8,7 +8,7 @@ function Join() {
             <div className="sec1">
                 <h1>Join Us</h1>
                 <h4>Accelerate the world’s transition to sustainable energy.</h4>
-                <Link>Search Careers</Link>
+                <Link to={"careers"}>Search Careers</Link>
             </div>
            <div className="textBox">
            <p>Tesla participates in the <Link>E-Verify Program</Link>.</p>
